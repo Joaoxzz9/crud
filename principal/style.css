@@ -1,0 +1,217 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 80px 20px 20px; /* Espaço para o header fixo */
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#phones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.phone-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.phone-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.phone-details {
+    font-size: 14px;
+    color: #666;
+}
+
+.phone-details p {
+    margin: 5px 0;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    grid-column: 1 / -1;
+}
+
+/* BOTÃO HAMBURGUER */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    display: none; /* some no desktop */
+}
+
+/* MENU NORMAL */
+nav ul {
+    display: flex;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* mostra o botão */
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+
+    /* esconde o menu */
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px;
+    }
+
+    /* quando estiver ativo */
+    nav.active {
+        display: block;
+    }
+}
+
+/* BOTÃO HAMBURGUER */
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    display: none; /* some no desktop */
+}
+
+/* MENU NORMAL */
+nav ul {
+    display: flex;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* mostra o botão */
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+
+    /* esconde o menu */
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px;
+    }
+
+    /* quando estiver ativo */
+    nav.active {
+        display: block;
+    }
+}
