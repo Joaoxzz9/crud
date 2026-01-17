@@ -14,13 +14,13 @@ def atualizar_precos():
         conteudo_js = f.read()
 
     for nome_celular, novo_preco in tabela_precos.items():
-        # Esta nova Regex aceita ' ou " e ignora espaços extras
-        # Procura por name: seguido de qualquer aspa, o nome do celular e fecha aspas
+        # A correção principal: re.escape e suporte a qualquer caractere entre nome e preço
+        # O (.*?) agora vai procurar em toda a linha até achar o price
         padrao = r"(name:\s*['\"]" + re.escape(nome_celular) + r"['\"].*?price:\s*)\d+"
         
-        if re.search(padrao, conteudo_js):
-            # Substitui mantendo a formatação original
-            conteudo_js = re.sub(padrao, r"\1" + str(novo_preco), conteudo_js)
+        # Usamos re.DOTALL para garantir que ele não pare no fim da linha
+        if re.search(padrao, conteudo_js, re.DOTALL):
+            conteudo_js = re.sub(padrao, r"\1" + str(novo_preco), conteudo_js, flags=re.DOTALL)
             print(f"✅ {nome_celular} atualizado para R$ {novo_preco}")
         else:
             print(f"❌ {nome_celular} não encontrado. Verifique se o nome está IGUAL no JS.")
