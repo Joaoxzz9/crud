@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da Análise - TechCompare</title>
+    <link rel="stylesheet" href="analise.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">TechCompare</h1>
+            <div class="menu-hamburguer" id="menu-hamburguer">☰</div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="../principal/index.html">Página Inicial</a></li>
+                    <li><a href="../melhores celulares/index.html" class="nav-back">Voltar para Comparação</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="analysis-title">
+            <h2>Veredito da Inteligência Artificial</h2>
+            <p>Analisamos Tela, Bateria, Câmera, Ano e Custo-Benefício.</p>
+        </div>
+
+        <div class="fighters-ring">
+            <div class="fighter-card" id="card-1">
+                <div class="medal" id="medal-1" style="display:none">🏆 VENCEDOR</div>
+                <h3 id="name-1">Carregando...</h3>
+                <div class="specs-summary">
+                    <span id="year-1">-</span>
+                    <span id="price-1">-</span>
+                </div>
+               <div class="big-score" id="score-1">--</div>
+                <p class="score-label">Nota Geral</p>
+            </div>
+
+            <div class="vs-divider">VS</div>
+
+            <div class="fighter-card" id="card-2">
+                <div class="medal" id="medal-2" style="display:none">🏆 VENCEDOR</div>
+                <h3 id="name-2">Carregando...</h3>
+                <div class="specs-summary">
+                    <span id="year-2">-</span>
+                    <span id="price-2">-</span>
+                </div>
+                <div class="big-score" id="score-2">--</div>
+                <p class="score-label">Nota Geral</p>
+            </div>
+        </div>
+
+        <div class="verdict-box">
+            <h3>💡 Nossa Recomendação</h3>
+            <p id="recommendation-text">Analisando os dados...</p>
+        </div>
+
+        <div class="details-section" id="bars-container">
+            </div>
+    </div>
+
+    <script src="analise.js"></script>
+</body>
+</html>
