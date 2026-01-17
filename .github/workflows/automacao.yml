@@ -1,27 +1,27 @@
-name: Robô de Atualização TechCompare
+name: Robo de Atualizacao TechCompare
 
 on:
-  workflow_dispatch: # Isto permite-te rodar o robô manualmente com um botão
+  workflow_dispatch: # Permite rodar manualmente pelo botão no GitHub
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Baixar o código do site
+      - name: Checkout do codigo
         uses: actions/checkout@v3
 
-      - name: Configurar o Python
+      - name: Configurar Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
-      - name: Rodar script de atualização
+      - name: Rodar script de atualizacao
         run: python atualizador.py
 
-      - name: Salvar mudanças no código
+      - name: Salvar mudancas
         run: |
-          git config --global user.name 'Robô TechCompare'
-          git config --global user.email 'robot@techcompare.com'
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
           git add script.js
-          git commit -m "Automação: Preços atualizados via robô" || exit 0
+          git commit -m "Automacao: Preco atualizado" || exit 0
           git push
