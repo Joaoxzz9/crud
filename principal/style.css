@@ -25,6 +25,7 @@ header {
     color: white;
 }
 
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -71,7 +72,7 @@ h1 {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 4px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -216,3 +217,47 @@ nav ul {
     }
 }
 
+.container2{
+   border-width: 5px;
+   padding: 15px;
+   border-style: solid;
+   border-color: rgb(195, 195, 195);
+   background-color: rgb(195, 195, 195);
+   border-radius: 15px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Estilo para a div pai (opcional, para centralizar) */
+#compare {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Estilo para preencher o botão de verde */
+#compare button {
+    background-color: #333; /* Verde chamativo */
+    color: white;               /* Cor do texto */
+    padding: 5px 30px;         /* Espaço interno para o botão ficar grande */             /* Remove a borda padrão chata */
+    border-radius: 8px;         /* Arredonda as bordas */
+    font-size: 18px;            /* Tamanho da letra */
+    font-weight: bold;          /* Deixa o texto em negrito */
+    cursor: pointer;            /* Faz a mãozinha aparecer ao passar o mouse */
+    width: 100%;                /* Faz o botão ocupar toda a largura disponível */
+    max-width: 400px;           /* Limita a largura para não ficar exagerado */
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse (hover) */
+#compare button:hover {
+    background-color: gray; /* Um verde um pouco mais escuro */
+}
+
+#compare a:active{
+     color: #333;
+}
+
+#compare a:visited{
+    color: white;
+}
