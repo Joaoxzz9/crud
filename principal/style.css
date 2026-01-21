@@ -49,18 +49,31 @@ nav ul li a:hover {
     background-color: #555;
 }
 
+
 body {
-    font-family: Arial, sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 80px 20px 20px; /* Espaço para o header fixo */
+    padding: 0;
+    /* Configura o layout para empurrar o footer para o fim da página */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#melhores{
+    text-align: start;
 }
 
 .container {
-    max-width: 1200px;
+   max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
+    padding: 100px 20px 40px; /* Espaço para o header não cobrir o texto */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    flex: 1; /* Faz esta div ocupar todo o espaço e empurrar o footer */
+    box-shadow: 0 15px 15px #333; /* Sombra suave para dar profundidade */
+    border: 1px solid #333; /* Borda quase invisível para definir o limite */
 }
 
 h1 {
@@ -225,6 +238,9 @@ nav ul {
    background-color: rgb(195, 195, 195);
    border-radius: 15px;
    font-family: Arial, Helvetica, sans-serif;
+   box-shadow: 10px 0px 10px #333;
+   
+
 }
 
 
@@ -247,11 +263,13 @@ nav ul {
     width: 100%;                /* Faz o botão ocupar toda a largura disponível */
     max-width: 400px;           /* Limita a largura para não ficar exagerado */
     transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+    box-shadow: 0 15px 15px #333; /* Sombra suave para dar profundidade */
+    border: 1px solid #333; /* Borda quase invisível para definir o limite */
 }
 
 /* Efeito ao passar o mouse (hover) */
 #compare button:hover {
-    background-color: gray; /* Um verde um pouco mais escuro */
+    background-color: #555; /* Um verde um pouco mais escuro */
 }
 
 #compare a:active{
@@ -260,4 +278,14 @@ nav ul {
 
 #compare a:visited{
     color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Garante que ele fique no final do flexbox */
+    /* REMOVEMOS: position: fixed, bottom: 0, etc. */
 }
