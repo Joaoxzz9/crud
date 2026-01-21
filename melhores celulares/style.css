@@ -100,7 +100,7 @@ h1 {
     background: white;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px #333;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid transparent;
@@ -120,6 +120,7 @@ h1 {
 .brand-card.samsung-brand:hover {
     border-color: #1428a0;
     background: linear-gradient(135deg, #ffffff 0%, #f0f2ff 100%);
+ 
 }
 
 .brand-card.xiaomi-brand:hover {
@@ -177,14 +178,17 @@ h1 {
 
 .apple-card {
     border-left: 5px solid #ff3b30; /* Vermelho para Apple */
+    box-shadow: 0px 0px 5px #333;
 }
 
 .samsung-card {
     border-left: 5px solid #007aff; /* Azul para Samsung */
+    box-shadow: 0px 0px 5px #333;
 }
 
 .xiaomi-card {
     border-left: 5px solid #34c759; /* Verde para Xiaomi */
+    box-shadow: 0px 0px 5px #333;
 }
 
 .comparison-container {
